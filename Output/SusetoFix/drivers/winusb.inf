@@ -1,0 +1,4 @@
+; Suseto DroidFixAutomator WinUSB INF Template
+[Version]
+Signature="$Windows NT$"
+Class=USBDevice

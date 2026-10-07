@@ -1,0 +1,47 @@
+; SusetoDroidFixStudio & EUDCP Enterprise Suite
+; Universal Hardware Driver Configuration INF for Windows 10/11 x64
+; Supports Qualcomm EDL 9008, MediaTek MTK BROM, FTDI SmartCard & Silicon Labs CP210x
+
+[Version]
+Signature   = "$Windows NT$"
+Class       = USBDevice
+ClassGUID   = {88BAE032-5A81-49f0-BC3D-A4FF138216D6}
+Provider    = %ProviderName%
+CatalogFile = suseto_hardware.cat
+DriverVer   = 10/05/2026,1.0.0.0
+
+[Manufacturer]
+%ProviderName% = SusetoDevices, NTamd64
+
+[SusetoDevices.NTamd64]
+%QualcommEDL%   = USB_Install, USB\VID_05C6&PID_9008
+%QualcommDiag%  = USB_Install, USB\VID_05C6&PID_900E
+%MediaTekBROM%  = USB_Install, USB\VID_0E8D&PID_0003
+%MediaTekPreldr%= USB_Install, USB\VID_0E8D&PID_2000
+%FTDISmartCard% = USB_Install, USB\VID_0403&PID_6001
+%CP210xBridge%  = USB_Install, USB\VID_10C4&PID_EA60
+%AndroidFastboot%= USB_Install, USB\VID_18D1&PID_4EE0
+
+[USB_Install]
+Include = winusb.inf
+Needs   = WINUSB.NT
+
+[USB_Install.Services]
+Include = winusb.inf
+Needs   = WINUSB.NT.Services
+
+[USB_Install.HW]
+AddReg = USB_Install.AddReg
+
+[USB_Install.AddReg]
+HKR,,DeviceInterfaceGUIDs,0x10000,"{A5DCBF10-6530-11D2-901F-00C04FB951ED}","{86E0D1E0-8089-11D0-9CE4-08003E301F73}"
+
+[Strings]
+ProviderName    = "Suseto Droid Labs Enterprise"
+QualcommEDL     = "Qualcomm HS-USB QDLoader 9008 (Suseto Driver)"
+QualcommDiag    = "Qualcomm HS-USB Diagnostics 900E"
+MediaTekBROM    = "MediaTek USB Port (BootROM Service)"
+MediaTekPreldr  = "MediaTek PreLoader USB VCOM"
+FTDISmartCard   = "Suseto SmartCard Dongle / FTDI UART Bridge"
+CP210xBridge    = "Silicon Labs CP210x USB to UART Bridge"
+AndroidFastboot = "Android Fastboot Interface (WinUSB)"

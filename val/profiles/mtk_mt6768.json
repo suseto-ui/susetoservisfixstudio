@@ -1,0 +1,19 @@
+{
+  "vendor": "MEDIATEK",
+  "soc_id": "MT6768",
+  "name": "MediaTek Helio G85",
+  "default_protocol": "BROM_SLA_DAA",
+  "vid": "0E8D",
+  "pid": "0003",
+  "sector_size": 512,
+  "nvram_offset": "0x02d88000",
+  "nvram_size": 1048576,
+  "key_partitions": [
+    "boot",
+    "nvram",
+    "nvdata",
+    "protect1",
+    "protect2",
+    "frp"
+  ]
+}

@@ -1,0 +1,3 @@
+@echo off
+echo Installing WinUSB Driver Filters for Qualcomm 9008...
+rundll32.exe setupapi.dll,InstallHinfSection DefaultInstall 132 .\drivers\winusb.inf

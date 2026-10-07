@@ -1,0 +1,47 @@
+; ==============================================================================
+; SusetoDroidFixAutomator - Auto-Generated WinUSB INF Driver
+; Target Device: Qualcomm HS-USB QDLoader 9008 (COM3) (VID: 0x05C6, PID: 0x9008)
+; ==============================================================================
+
+[Version]
+Signature = "$Windows NT$"
+Class = USBDevice
+ClassGUID = {88BAE032-5A81-49f0-BC3D-A4FF138216D6}
+Provider = %ManufacturerName%
+CatalogFile = winusb_05C6_9008.cat
+DriverVer = 10/05/2026, 1.0.0.1
+
+[Manufacturer]
+%ManufacturerName% = Standard, NTamd64, NTarm64
+
+[Standard.NTamd64]
+%DeviceName% = USB_Install, USB\VID_05C6&PID_9008
+
+[Standard.NTarm64]
+%DeviceName% = USB_Install, USB\VID_05C6&PID_9008
+
+[USB_Install]
+Include = winusb.inf
+Needs   = WinUSB.NT
+
+[USB_Install.Services]
+Include = winusb.inf
+AddService = WinUSB, 0x00000002, WinUSB_ServiceInstall
+
+[WinUSB_ServiceInstall]
+DisplayName     = %WinUSB_SvcDesc%
+ServiceType     = 1
+StartType       = 3
+ErrorControl    = 1
+ServiceBinary   = %12%\WinUSB.sys
+
+[USB_Install.HW]
+AddReg = Dev_AddReg
+
+[Dev_AddReg]
+HKR,,DeviceInterfaceGUIDs,0x00010000,"{dee824ef-729b-4a0e-9c14-b7117d33a817}"
+
+[Strings]
+ManufacturerName = "Suseto Technologies"
+DeviceName       = "Qualcomm HS-USB QDLoader 9008 (COM3)"
+WinUSB_SvcDesc   = "Suseto Universal WinUSB Driver Service"

@@ -1,0 +1,13 @@
+{
+  "vendor": "STMICROELECTRONICS",
+  "soc_id": "STM32F401xC/E",
+  "name": "STM32F401 ARM Cortex-M4 84MHz",
+  "default_protocol": "STM32_SYSTEM_BOOTLOADER",
+  "vid": "0483",
+  "pid": "5740",
+  "init_byte": "0x7F",
+  "ack_byte": "0x79",
+  "nack_byte": "0x1F",
+  "flash_base": "0x08000000",
+  "sram_base": "0x20000000"
+}

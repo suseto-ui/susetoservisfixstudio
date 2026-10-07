@@ -1,0 +1,14 @@
+{
+    "application": "SusetoDroidFixStudio v1.0-PROD",
+    "timestamp": "2026-10-04T16:16:15.356928",
+    "device_info": {
+        "serial": "TEST1234",
+        "model": "Pixel Test"
+    },
+    "repair_actions": [
+        "Záloha EFS",
+        "Patch VBMeta"
+    ],
+    "ai_diagnosis": "Zjištěna opravená chyba bootloopu.",
+    "status": "SUCCESS"
+}

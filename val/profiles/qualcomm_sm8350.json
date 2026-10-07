@@ -1,0 +1,21 @@
+{
+  "vendor": "QUALCOMM",
+  "soc_id": "SM8350",
+  "name": "Qualcomm Snapdragon 888",
+  "default_protocol": "SAHARA_FIREHOSE",
+  "vid": "05C6",
+  "pid": "9008",
+  "sector_size": 4096,
+  "supported_loaders": [
+    "prog_firehose_lite.mbn",
+    "prog_firehose_ddr.mbn"
+  ],
+  "key_partitions": [
+    "boot",
+    "recovery",
+    "modem",
+    "persist",
+    "userdata",
+    "frp"
+  ]
+}

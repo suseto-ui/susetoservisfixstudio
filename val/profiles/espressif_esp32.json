@@ -1,0 +1,16 @@
+{
+  "vendor": "ESPRESSIF",
+  "soc_id": "ESP32-D0WDQ6",
+  "name": "Espressif ESP32 Dual-Core Xtensa",
+  "default_protocol": "ESP_ROM_BOOTLOADER",
+  "vid": "10C4",
+  "pid": "EA60",
+  "rom_sync_opcode": "0x08",
+  "default_baud": 115200,
+  "max_flash_baud": 921600,
+  "features": [
+    "WiFi-802.11bgn",
+    "BLE-4.2",
+    "SPI-Flash-16MB"
+  ]
+}

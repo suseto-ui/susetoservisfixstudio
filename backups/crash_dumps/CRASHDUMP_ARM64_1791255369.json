@@ -1,0 +1,27 @@
+{
+  "dump_id": "CRASHDUMP_ARM64_1791255369",
+  "port": "COM3",
+  "architecture": "ARM64",
+  "timestamp": 1791255369,
+  "registers": {
+    "PC": "0xFFFFFF8008234B90",
+    "LR": "0xFFFFFF8008234A20",
+    "SP": "0xFFFFFF8009A17DC0",
+    "CPSR": "0x60400005 (EL1h, FIQ/IRQ masked)",
+    "X0": "0x0000000000000000",
+    "X1": "0xFFFFFF8008E12300",
+    "X2": "0x0000000000000004",
+    "X3": "0x0000000000000001",
+    "X29 (FP)": "0xFFFFFF8009A17DF0",
+    "X30 (LR)": "0xFFFFFF8008234A20"
+  },
+  "panic_string": "Kernel Panic: Fatal Exception in Interrupt (Null pointer dereference in usb_serial_driver)",
+  "backtrace": [
+    "0xFFFFFF8008234B90: qcom_edl_rx_handler+0x170/0x240",
+    "0xFFFFFF8008234A20: sahara_packet_dispatch+0x80/0x120",
+    "0xFFFFFF80081C4010: usb_serial_generic_read+0x44/0x90",
+    "0xFFFFFF80081C3D20: process_one_work+0x180/0x3a0"
+  ],
+  "ram_snippet_size_bytes": 2048,
+  "ram_snippet_sha256": "3a7f105b614f0c84814a8a90c140d9cae129e23fd18c3d5ffbb45861c78f1770"
+}

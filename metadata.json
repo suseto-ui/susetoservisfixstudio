@@ -1,0 +1,7 @@
+{
+  "name": "EUDCP Console & Diagnostic Suite",
+  "description": "Enterprise Universal Hardware Diagnostic, Low-Level Flash, and Communication Platform (EUDCP) including custom auto-tuning engines, multi-vendor handshaking adapters (ESP32, STM32, Qualcomm, MediaTek), high-speed mmap flash dumper, and SQLite WAL transaction logs.",
+  "permissions": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
